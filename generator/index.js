@@ -12,4 +12,12 @@ module.exports = (api) => {
     })
 
     api.render('./template')
+
+    api.onCreateComplete(() => {
+        const fs = require('fs')
+        fs.unlinkSync('./src/assets/logo.png')
+        fs.unlinkSync('./src/components/HelloWorld.vue')
+        fs.unlinkSync('./src/views/Home.vue')
+        fs.unlinkSync('./src/views/About.vue')
+    })
 }
