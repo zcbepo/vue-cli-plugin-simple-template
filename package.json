@@ -1,0 +1,21 @@
+{
+  "name": "vue-cli-plugin-simple-template",
+  "version": "0.0.1",
+  "description": "simple template plugin of vue-cli 3",
+  "author": "Cheng Zou",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zcbepo/vue-cli-plugin-simple-template.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-cli",
+    "plugin",
+    "cli"
+  ],
+  "bugs": {
+    "url": "https://github.com/zcbepo/vue-cli-plugin-simple-template/issues"
+  }
+}
