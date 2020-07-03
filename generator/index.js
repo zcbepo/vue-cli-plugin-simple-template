@@ -6,5 +6,5 @@ module.exports = (api) => {
         }
     })
 
-    api.injectImports(api.injectImports('src/main.js', `import axios from 'axios'`))
+    api.injectImports(api.injectImports(api.entryFile, `import axios from 'axios'`))
 }
