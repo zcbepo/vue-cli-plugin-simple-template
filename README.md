@@ -4,5 +4,5 @@ usage:
 ```
     vue create my-app
     cd my-app
-    vue add simple-template
+    vue invoke simple-template
 ```
