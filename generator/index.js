@@ -17,8 +17,13 @@ module.exports = (api) => {
 
     api.onCreateComplete(() => {
         const fs = require('fs')
-        fs.unlinkSync('./src/assets/logo.png')
-        fs.unlinkSync('./src/components/HelloWorld.vue')
-        fs.unlinkSync('./src/views/Home.vue')
+        const helloWorldComp = './src/components/HelloWorld.vue'
+        const homePage = './src/views/Home.vue'
+        if (fs.existsSync(helloWorldComp)) {
+            fs.unlinkSync(helloWorldComp)
+        }
+        if (fs.existsSync(homePage)) {
+            fs.unlinkSync(homePage)
+        }
     })
 }
