@@ -1,6 +1,10 @@
 module.exports = (api) => {
+    api.render('./template')
+
     api.extendPackage({
         dependencies: {
+            'vue-router': '^3.3.4',
+            'vuex': '^3.5.1',
             'axios': '^0.19.2',
             'element-ui': '^2.4.5'
         },
@@ -11,13 +15,10 @@ module.exports = (api) => {
         }
     })
 
-    api.render('./template')
-
     api.onCreateComplete(() => {
         const fs = require('fs')
         fs.unlinkSync('./src/assets/logo.png')
         fs.unlinkSync('./src/components/HelloWorld.vue')
         fs.unlinkSync('./src/views/Home.vue')
-        fs.unlinkSync('./src/views/About.vue')
     })
 }

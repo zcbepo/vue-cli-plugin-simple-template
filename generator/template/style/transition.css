@@ -1,0 +1,7 @@
+.main-enter-active, .main-leave-active {
+    transition: opacity .3s;
+}
+
+.main-enter, .main-leave-to {
+    opacity: 0;
+}
