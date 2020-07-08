@@ -3,7 +3,7 @@ import storage from "../utils/storage"
 import Message from 'element-ui/packages/message/index'
 
 const instance = axios.create({
-    baseURL: VUE_APP_BASEURL
+    baseURL: process.env.VUE_APP_BASEURL
 })
 
 instance.interceptors.request.use((option) => {
