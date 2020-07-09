@@ -4,6 +4,8 @@ vue-cli-plugin-simple-template is a template plugin for most applications of my 
 
 It is based on [vue](https://cn.vuejs.org/index.html), and I referenced [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/)
 
+[simple-template-node-server](https://github.com/zcbepo/simple-template-node-server) is a test server for this template.
+
 Usage:
 ```
     vue create my-app
