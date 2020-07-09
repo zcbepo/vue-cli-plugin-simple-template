@@ -4,6 +4,7 @@ const storage = {
     keys: {
         TOKEN: 'token',
         USERNAME: 'username',
+        NICKNAME: 'nickname',
         PASSWORD: 'password',
         CHECKED: 'checked'
     },

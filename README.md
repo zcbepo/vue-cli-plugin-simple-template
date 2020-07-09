@@ -1,8 +1,8 @@
 ## vue-cli-plugin-simple-template
 
-vue-cli-plugin-simple-template is a template plugin for most applications of my company.
+vue-cli-plugin-simple-template is a template plugin for most applications of my work. It is made to increase my working efficiency.
 
-it is based on vue, referenced [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/)
+It is based on [vue](https://cn.vuejs.org/index.html), and I referenced [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin/)
 
 Usage:
 ```
@@ -12,3 +12,5 @@ Usage:
     cd my-app
     vue add simple-template
 ```
+![screen shots](/images/login.png)
+![screen shots](/images/main.jpg)
