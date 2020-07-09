@@ -12,5 +12,6 @@ Usage:
     cd my-app
     vue add simple-template
 ```
-![screen shots](/images/login.png)
-![screen shots](/images/main.jpg)
+
+![screenshot](/screenshots/login.png)
+![screenshot](/screenshots/main.jpg)
