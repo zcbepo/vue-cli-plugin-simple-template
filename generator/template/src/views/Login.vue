@@ -30,6 +30,7 @@ export default {
   name: "login-page",
   data() {
     return {
+      to: '/',
       loginForm: {
         checked: false,
         userName: "",
@@ -47,6 +48,7 @@ export default {
     };
   },
   mounted() {
+    this.to = this.$route.query.redirect || '/'
     this.loginForm.userName = storage.get('username') || ""
     this.loginForm.password = storage.get('password') || ""
     this.loginForm.checked = storage.get('checked') === "true"
@@ -56,7 +58,8 @@ export default {
       this.$refs.loginForm.validate(validated => {
         if (validated) {
           const { userName, password, checked } = this.loginForm;
-          this.$store.dispatch("user/login", { userName, password, checked });
+          this.$store.dispatch("user/login", { userName, password, checked })
+            .then(() => this.$router.replace(this.to));
         }
       });
     }

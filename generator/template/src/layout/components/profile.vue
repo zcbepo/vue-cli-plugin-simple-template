@@ -6,7 +6,7 @@
     <el-avatar class="user-avator" :size="30" :src="require('@/assets/logo.png')"></el-avatar>
     <el-dropdown @command="onCommand">
       <span>
-        {{userName}}<i class="el-icon-arrow-down el-icon--right"></i>
+        {{nickName}}<i class="el-icon-arrow-down el-icon--right"></i>
       </span>
       <el-dropdown-menu slot="dropdown">
         <el-dropdown-item command="logout">退出登录</el-dropdown-item>
@@ -16,16 +16,13 @@
 </template>
 
 <script>
-import storage from '../../utils/storage'
 export default {
   name: 'app-profile',
   methods: {
     onCommand(index) {
-      console.log(index)
       switch(index) {
         case "logout":
-          storage.remove("token");
-          this.$router.replace("/login");
+          this.$store.dispatch('user/logout')
       }
     }
   },
@@ -33,8 +30,8 @@ export default {
     unreadCount() {
       return Math.floor(Math.random() * 120)
     },
-    userName() {
-      return this.$store.state.user.userName
+    nickName() {
+      return this.$store.state.user.nickName
     }
   }
 }

@@ -83,4 +83,10 @@ router.beforeEach((to, from, next) => {
     document.title = to.meta.title || "simple-template"
 })
 
+// Avoided redundant navigation to current location
+const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+}
+
 export default router
