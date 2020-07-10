@@ -13,7 +13,7 @@
         <el-input placeholder="account" v-model="loginForm.userName"></el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input placeholder="password" v-model="loginForm.password"></el-input>
+        <el-input placeholder="password" show-password v-model="loginForm.password"></el-input>
       </el-form-item>
       <el-form-item pros="checked">
         <el-checkbox v-model="loginForm.checked">remember account</el-checkbox>
